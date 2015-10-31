@@ -85,15 +85,15 @@
         
     bool prime = true;
     
-    if(number == 1){  //1 is not a prime
+    if(number <= 1){  //0-1 not a prime
         return false;
     }
     
-    if(number == 2){ //smallest prime
+    if(number <= 3){
         return true;
     }
     
-    if(number %2 == 0){ //check for even numbers
+    if(number %2 == 0){  //check even numbers
         prime = false;
     }
     else if([self checkPrimeList:number] == false){
